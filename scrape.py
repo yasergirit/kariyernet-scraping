@@ -1,11 +1,14 @@
 import requests
 from bs4 import BeautifulSoup
 from pprint import pprint
+import last_page
 
-keyword = input("Enter a keyword for looking for jobs:\n")
 
+last_page.last_page()
+
+"""
 counter = 0
-for i in range(3):
+for i in range(lp):
     URL = "https://www.kariyer.net/is-ilanlari?kw={}&cp={}".format(keyword, i)
     page = requests.get(URL)
     
@@ -19,4 +22,4 @@ for i in range(3):
         print(company_element.replace(" "*21, ""), job_element.replace(" "*23, ""))
         
     counter += 1
-    print("Page:", counter)
+    print("Page:", counter)"""
